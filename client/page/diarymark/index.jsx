@@ -134,7 +134,7 @@ export default class DiaryMark extends Component {
         const result = Object.keys(workData).filter(item => moment(item, momentFormat).isSameOrAfter(beforeMonth) && workData[item]).map(item => item);
         result.sort((a, b) => a - b);
         try {
-            await copy(result.map(item => moment(item, momentFormat).format('MM月DD日')).join('\n'));
+            await copy(result.map(item => moment(item, momentFormat).format('YYYY年M月D日')).join('\n'));
             Toast.success('复制成功');
         } catch (err) {
             Toast.fail('复制失败');
@@ -160,7 +160,7 @@ export default class DiaryMark extends Component {
                         <span>前一天</span>
                     </div>
                     <div className="time" onClick={this.selectDate}>
-                        {dateTime.format('MM 月 DD 日')}
+                        {`${dateTime.format('MM月DD日 周')}${weekDay[dateTime.weekday()]}`}
                     </div>
                     <div className="next" onClick={this.nextDay}>
                         <span>后一天</span>
