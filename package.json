@@ -1,0 +1,80 @@
+{
+    "name": "monking-demo",
+    "version": "1.0.0",
+    "description": "monking demo for client side render",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon --trace-deprecation",
+        "build": "webpack --config webpack/webpack.prod.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chenhebing/monking-demo.git"
+    },
+    "keywords": [
+        "monking",
+        "react",
+        "csr"
+    ],
+    "author": "1025263994@qq.com",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/preset-env": "^7.1.6",
+        "antd-mobile": "^2.2.3",
+        "axios": "^0.18.0",
+        "babel-plugin-import": "^1.11.0",
+        "clipboard-copy": "^2.0.1",
+        "monking": "^1.1.0",
+        "monking-react-render": "^1.1.14",
+        "query-string": "^6.1.0",
+        "react-fastclick": "^3.0.2",
+        "react-redux": "^5.1.0",
+        "react-router-dom": "^4.3.1",
+        "redux": "^4.0.1"
+    },
+    "engines": {
+        "node": ">= 8.9.0"
+    },
+    "nodemonConfig": {
+        "verbose": false,
+        "restartable": "rs",
+        "ignore": [
+            ".git/",
+            "node_modules/"
+        ],
+        "execMap": {
+            "js": "node --harmony"
+        },
+        "watch": [
+            "config",
+            "server/middleware",
+            "server/model/**/index.js",
+            "webpack"
+        ],
+        "env": {
+            "NODE_ENV": "development"
+        },
+        "ext": "js"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.1.0",
+        "acorn": "^6.0.3",
+        "css-hot-loader": "^1.4.2",
+        "elint": "^1.8.1",
+        "eslint": "^5.3.0",
+        "eslint-config-mpfe": "^1.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.2",
+        "eslint-plugin-node": "^7.0.1",
+        "eslint-plugin-react": "^7.10.0",
+        "eslint-plugin-standard": "^3.1.0",
+        "friendly-errors-webpack-plugin": "^1.7.0",
+        "koa-webpack": "^5.1.1",
+        "nodemon": "^1.17.3",
+        "optimize-css-assets-webpack-plugin": "^5.0.1",
+        "react-hot-loader": "^4.3.12",
+        "react-hot-loader-loader": "0.0.6",
+        "uglifyjs-webpack-plugin": "^2.0.1",
+        "webpack-bundle-analyzer": "^3.0.3"
+    }
+}

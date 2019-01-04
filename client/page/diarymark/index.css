@@ -1,0 +1,44 @@
+:local(.className) {
+    font-family: PINGFANG;
+    .tab-bar {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(#f292f9, #ffffff, #ffffff);
+        z-index: -1;
+        padding-top: 80px;
+        box-sizing: border-box;
+        .text-input {
+            margin-top: 40px;
+            &.active {
+                border: 1px solid #f292f9;
+            }
+        }
+        .am-button::before {
+            border: 1px solid #f292f9;
+        }
+    }
+    .date-time {
+        font-size: 16px;
+        height: 60px;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        .pre, .next {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        span {
+            margin: -3px 5px 0;
+        }
+        .time {
+            flex: 1;
+            text-align: center;
+        }
+    }
+}
